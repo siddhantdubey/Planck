@@ -1,0 +1,5 @@
+- Complex Systems: [https://ncssm.zoom.us/j/2215839909](https://ncssm.zoom.us/j/2215839909)
+- Chemistry: [https://ncssm.zoom.us/j/98030728385](https://ncssm.zoom.us/j/98030728385)
+- Digital Humanities: [https://ncssm.zoom.us/j/96079532125](https://ncssm.zoom.us/j/96079532125)
+- Topics in Theoretical Math: https://ncssm.zoom.us/j/91597343651?pwd=WlN0ZWMrbHlWUjk2UWlIMHZ6MmtPZz09
+- Astrophysics: https://ncssm.zoom.us/j/99022138105?pwd=VGxmZmE4SlU1QkJaRndZV2dOb3lBUT09
