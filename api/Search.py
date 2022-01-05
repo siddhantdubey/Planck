@@ -30,8 +30,9 @@ class Search(Resource):
                                 if query in line.lower():
                                     found = True
                                     matches.append(line)
+                            total_text = "".join(lines)
                             if found:
-                                results.append([filepath, matches])
+                                results.append([filepath, matches, total_text])
                     except:
                         try:
                             a = r"\\?\""
@@ -43,8 +44,9 @@ class Search(Resource):
                                     if query in line:
                                         found = True
                                         matches.append(line)
+                                total_text = "".join(lines)
                                 if found:
-                                    results.append([filepath, matches])
+                                    results.append([filepath, matches, total_text])
                         except:
                             pass
         return results

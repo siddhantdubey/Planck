@@ -22,6 +22,7 @@ function App() {
     <ChakraProvider>
       <div className="App">
         <Input onChange={e => {
+          e.preventDefault();
           setQuery(e.target.value)
         }} placeholder='search text goes here'/>
         <Button color='Teal' onClick={e => {
@@ -35,13 +36,13 @@ function App() {
           Search
         </Button>
         {/* make a list for search results to be displayed in */}
-        {results.length == 0 && <Text>No results found</Text>}
-        {results.length != 0 && <SimpleGrid columns={1} spacing={0}>
+        {(query == "" || query == " ") && <Text>No results found</Text>}
+        {query != '' && <List>
           {results.map(result => {
             const combinedText = result[1].join(' ')
-            return <Result link={result[0]} text={combinedText}/>
+            return <Result link={result[0]} text={combinedText} totalText={result[2]}/>
           })}
-        </SimpleGrid>}
+        </List>}
       </div>
     </ChakraProvider>
   );
