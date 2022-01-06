@@ -1,4 +1,5 @@
 import React from "react";
+import useCopyAsMarkdown from '@cnakazawa/copy-as-markdown';
 import {
   Box,
   Flex,
@@ -12,13 +13,12 @@ import {
 
 function Popup(props) {
     const {link} = props;
+    const setRef = useCopyAsMarkdown();
     var linkage = link.slice(4);
-    console.log("Link:", linkage)
-    const fr = new FileReader();
     return (
         <div className="popup-box">
-          <div className="box">
-            <span className="close-icon" onClick={props.handleClose}>x</span>
+          <span className="close-icon" onClick={props.handleClose}>x</span>
+          <div className="box" ref={setRef}>
             {props.content}
           </div>
         </div>

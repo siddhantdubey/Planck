@@ -1,4 +1,5 @@
 .App {
+  background-color: #dddedf;
   text-align: center;
 }
 
@@ -13,25 +14,76 @@
   text-overflow: ellipsis;
 }
 
+.result-box {
+  margin-left: 15px;
+}
+
+.result-type {
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+.results-data {
+  margin-left: 15px;
+  text-align: left;
+}
+
+.result-div {
+  margin-left: 15px;
+  text-align: left;
+}
+
+.result-button{
+  background-color: #dddedf;
+  margin-left: 15px;
+  border: none;
+}
+
 /* Popup style */
 .popup-box {
   position: fixed;
-  z-index: 100000;
   background: #00000050;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
 }
- 
+/*This is used for the homepage of the application*/
+.no-query {
+  /*set the text to be left-aligned with a left margin*/
+  text-align: left;
+  margin-left: 15px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: large;
+}
+
+
+/*This is used for the search bar of the application*/
+
+.search-bar {
+  /*set the text to be left-aligned with a left margin*/
+  text-align: left;
+  margin-left: 20px;
+}
+
+.search-button {
+  background-color: #dddedf;
+  text-align: center;
+  border: none;
+}
+
 .box {
   position: relative;
   width: 70%;
   margin: 0 auto;
   height: auto;
   max-height: 70vh;
+  text-align: left;
   margin-top: calc(100vh - 85vh - 20px);
-  background: #fff;
+  background: #F3F4F6;
   border-radius: 4px;
   padding: 20px;
   border: 1px solid #999;

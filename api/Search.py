@@ -32,7 +32,7 @@ class Search(Resource):
                                     matches.append(line)
                             total_text = "".join(lines)
                             if found:
-                                results.append([filepath, matches, total_text])
+                                results.append([filepath, matches, total_text, "local"])
                     except:
                         try:
                             a = r"\\?\""
@@ -46,7 +46,7 @@ class Search(Resource):
                                         matches.append(line)
                                 total_text = "".join(lines)
                                 if found:
-                                    results.append([filepath, matches, total_text])
+                                    results.append([filepath, matches, total_text, "local"])
                         except:
                             pass
         return results
