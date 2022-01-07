@@ -1,6 +1,10 @@
 .App {
   background-color: #dddedf;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
 }
 
 .App-logo {
@@ -39,6 +43,14 @@
   border: none;
 }
 
+.result-button:hover {
+  background-color: #b8c5d1;
+}
+
+/* .result-div:hover {
+  background-color: #b8c5d1;
+} */
+
 /* Popup style */
 .popup-box {
   position: fixed;
@@ -56,10 +68,14 @@
 }
 
 .header {
-  font-weight: 600;
-  font-size: large;
+  font-weight: 800;
+  font-size: 40px;
 }
 
+.description {
+  font-weight: 500;
+  font-size: 20px;
+}
 
 /*This is used for the search bar of the application*/
 

@@ -16,7 +16,12 @@ function Result(props) {
     const [isOpen, setIsOpen] = useState(false);
     const {link, text, totalText, resultType} = props;
     const togglePopup = () => {
-        setIsOpen(!isOpen);
+        if (resultType === "local") {
+            setIsOpen(!isOpen);
+        }
+        if (resultType === "tweet") {
+            window.open("https://twitter.com/sidcodes/status/" + link, "_blank");
+        }
     }
 
     return (

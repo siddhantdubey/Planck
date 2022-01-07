@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import {Input,  Center, Container, Textarea, Stack,  Text, List, Box, SimpleGrid, ChakraProvider, Button, ButtonGroup, HStack } from "@chakra-ui/react"
+import {Input, Stack,  Text, ChakraProvider, Button} from "@chakra-ui/react"
 import Result from './components/Result'
 import axios from 'axios'
 
@@ -38,13 +37,16 @@ function App() {
           </Button>
         </Stack>
         {/* make a list for search results to be displayed in */}
-        {(query == "" || query == " ") && <Stack class="no-query">
+        {(query === "" || query === " ") && <Stack class="no-query">
             <Text class="header" fontSize="lg">Welcome to Planck</Text>
+            <p class="description">This is a search engine for all of my (Siddhant Dubey's) notes, tweets, YouTube videos, and my general presence on the internet.</p>
+            <p class="description">I've only indexed my personal notes so far and will be adding support for tweets, YouTube videos, and blog posts soon.</p>
           </Stack>}
-        {query != '' && 
+        {query !== '' && 
         <Stack direction={['row', 'column']}>
           <Text class="results-data">{results.length} results found</Text>
           {results.map(result => {
+            console.log(result)
             const combinedText = result[1].join(' ')
             return <Result link={result[0]} text={combinedText} totalText={result[2]} resultType={result[3]}/>
           })}
