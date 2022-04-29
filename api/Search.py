@@ -1,6 +1,4 @@
 import os
-import sys
-import glob
 import tweepy as tw
 import os
 from dotenv import load_dotenv
@@ -33,7 +31,9 @@ class Search(Resource):
         parser.add_argument('query', type=str, required = True, help = 'No task title provided', location = 'json')
         args = parser.parse_args()
         results = []
-        for subdir, dirs, files in os.walk(r'\\?\C:\Users\siddh\Documents\Projects\Planck\api\data'):
+        #api\data
+        #\\?\C:\Users\siddh\Documents\Projects\Planck\api\data
+        for subdir, dirs, files in os.walk(r'data/'):
             for filename in files:
                 filepath = subdir + os.sep + filename
                 if filepath.endswith(".md"):
