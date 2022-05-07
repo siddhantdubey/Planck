@@ -1,15 +1,47 @@
+:root {
+  --background-color: black;
+  --foreground-color: white;
+  --highlight-color: #ff9f43;
+}
+
 .App {
-  background-color: #dddedf;
+  /* left align everything in it */
+  
+  background-color: var(--background-color);
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 20px;
+  color: var(--foreground-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-bar {
+  /* center it in the screen with padding on the left right top and bottom  */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 40px;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  /* background-color: var(--highlight-color); */
+}
+
+.App-title {
+  font-size: 2em;
+  /* margin-bottom: 20px; */
+}
+
+.header {
+  color: var(--foreground-color);
+}
+
+.description {
+  color: var(--foreground-color);
 }
 
 .result {
@@ -38,13 +70,13 @@
 }
 
 .result-button{
-  background-color: #dddedf;
+  background-color: #202b36;
   margin-left: 15px;
   border: none;
 }
 
 .result-button:hover {
-  background-color: #b8c5d1;
+  background-color: #202b36;
 }
 
 /* .result-div:hover {
@@ -99,7 +131,7 @@
   max-height: 70vh;
   text-align: left;
   margin-top: calc(100vh - 85vh - 20px);
-  background: #F3F4F6;
+  background: #242e42;
   border-radius: 4px;
   padding: 20px;
   border: 1px solid #999;
@@ -112,7 +144,7 @@
   position: fixed;
   right: calc(15% - 30px);
   top: calc(100vh - 85vh - 33px);
-  background: #ededed;
+  /* background: #ededed; */
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -129,25 +161,50 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--background-color);
+  /* align the text to the left with some padding */
+  text-align: left;
+  padding: 20px;
+  /* set the text to be left-aligned with a left margin */
+  margin-left: 20px;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkbox-grid {
+  /*the grid has two rows, make them left align */
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+  /* grid-gap: 10px; */
+  /* grid-auto-flow: dense; */
+  /* align the text to the left with some padding */
+  text-align: center;
+  margin-left: 20px;
+  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.checkbox {
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  font-size: 400px;
+}
+
+.selections {
+  /* center everything in the div */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.checkbox-row {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  text-align: center;
+  padding:15px;
+  grid-gap: 1px;
 }
