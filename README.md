@@ -7,6 +7,11 @@ The code for this isn't very clean at all, considering it was mostly just a hack
 throughout the summer to make it more readable in addition to adding more features, but I have some more projects I want to work on for the time being and
 the application itself works, so I'm satisfied.
 
+This whole project was inspired by thesephist and his project [Monocle](https://github.com/thesephist/monocle).
+
+
+NOTE: THIS IS VERY VERY EARLY STAGES, I WILL BE ADDING MORE FEATURES AND CLEANING UP THE CODE THROUGHOUT THE NEXT FEW MONTHS.
+
 ## Running It Yourself
 If you want to run it yourself, then make sure you have Python installed and some way of getting JavaScript packages (NPM/Yarn). 
 
