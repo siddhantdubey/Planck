@@ -1,4 +1,6 @@
 import os
+import sys
+import glob
 import tweepy as tw
 import os
 from dotenv import load_dotenv
@@ -22,18 +24,17 @@ class Search(Resource):
     def get(self):
         return {
             'resultStatus': 'SUCCESS',
-            'message': "Hello Api Handler"
+            'message': "This is a useless request, use POST instead"
         }
-    
+
     def post(self):
         print(self)
         parser = reqparse.RequestParser()
-        parser.add_argument('query', type=str, required = True, help = 'No task title provided', location = 'json')
+        parser.add_argument('query', type=str, required=True,
+                            help='No task title provided', location='json')
         args = parser.parse_args()
         results = []
-        #api\data
-        #\\?\C:\Users\siddh\Documents\Projects\Planck\api\data
-        for subdir, dirs, files in os.walk(r'data/'):
+        for subdir, dirs, files in os.walk(r'\\?\C:\Users\siddh\Documents\Projects\Planck\api\data'):
             for filename in files:
                 filepath = subdir + os.sep + filename
                 if filepath.endswith(".md"):
@@ -49,7 +50,8 @@ class Search(Resource):
                                     matches.append(line)
                             total_text = "".join(lines)
                             if found:
-                                results.append([filepath, matches, total_text, "local"])
+                                results.append(
+                                    [filepath, matches, total_text, "local"])
                     except:
                         try:
                             a = r"\\?\""
@@ -63,7 +65,8 @@ class Search(Resource):
                                         matches.append(line)
                                 total_text = "".join(lines)
                                 if found:
-                                    results.append([filepath, matches, total_text, "local"])
+                                    results.append(
+                                        [filepath, matches, total_text, "local"])
                         except:
                             pass
         tweet_search = args['query'] + " (from:@sidcodes)"
